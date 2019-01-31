@@ -45,6 +45,7 @@ CMakeLists.txt.user*
 =======
 .vs/
 Debug/
+NDB-Kmeans-Logic/Debug/
 NDB-Kmeans-Logic.sdf
 NDB-Kmeans-Logic.opensdf
 >>>>>>> 项目创建
