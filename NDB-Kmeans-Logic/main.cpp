@@ -1,5 +1,6 @@
 #include<iostream>
 #include"infile.h"
+#include"toBString.h"
 using namespace std;
 int main() {
 	readData();
@@ -11,4 +12,11 @@ int main() {
 		}
 		cout << endl;
 	}
+	toBinaryString();
+	for (int i = 0; i < colLen.size(); i++)
+	{
+		cout << colLen[i]<<" ";
+	}
+	cout << endl;
+	cout << bData[0]<<endl;
 }

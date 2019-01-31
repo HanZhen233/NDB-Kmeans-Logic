@@ -148,10 +148,12 @@
   <ItemGroup>
     <ClInclude Include="global.h" />
     <ClInclude Include="infile.h" />
+    <ClInclude Include="toBString.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="infile.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="toBString.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
