@@ -1,6 +1,6 @@
 #include<iostream>
 #include"infile.h"
-
+using namespace std;
 int main() {
 	readData();
 	for (int  i = 0; i < dData.size(); i++)
