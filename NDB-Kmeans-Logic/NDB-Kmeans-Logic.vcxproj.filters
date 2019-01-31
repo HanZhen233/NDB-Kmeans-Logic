@@ -18,6 +18,12 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+<<<<<<< HEAD
+=======
+    <ClCompile Include="global.h">
+      <Filter>头文件</Filter>
+    </ClCompile>
+>>>>>>> temp
     <ClCompile Include="infile.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -26,8 +32,11 @@
     <ClInclude Include="infile.h">
       <Filter>头文件</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="global.h">
       <Filter>头文件</Filter>
     </ClInclude>
+=======
+>>>>>>> temp
   </ItemGroup>
 </Project>
