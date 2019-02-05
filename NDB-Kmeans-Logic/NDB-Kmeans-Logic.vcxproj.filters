@@ -24,6 +24,9 @@
     <ClInclude Include="toBString.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="toNDB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="infile.cpp">
@@ -33,6 +36,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="toBString.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="toNDB.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

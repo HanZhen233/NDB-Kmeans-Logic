@@ -4,6 +4,8 @@
 #include"global.h"
 #include<string>
 #include<vector>
+#include <stdlib.h>
+#include <time.h> 
 using namespace std;
 extern vector<vector<double>> dData;
 void readData() ;
