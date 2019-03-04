@@ -27,6 +27,21 @@
     <ClInclude Include="toNDB.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="calDistance.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="kmeans.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="knn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="infile.cpp">
@@ -39,6 +54,21 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="toNDB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="calDistance.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="kmeans.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="knn.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tool.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

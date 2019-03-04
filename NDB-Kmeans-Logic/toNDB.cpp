@@ -1,8 +1,6 @@
 # include"toNDB.h"
 vector<NDB> nDBs;//负数据库
 
-
-
 void toNDB() {
 	
 	int m = bData[0].size();
@@ -12,7 +10,7 @@ void toNDB() {
 	for (int i = 1; i <= m; i++)
 	{
 		a[i] = i;
-	}
+	}    
 	//对每条二进制串进行生成对应的数据库
 	for (int i = 0; i < bData.size(); i++)
 	{
@@ -35,7 +33,7 @@ void toNDB() {
 			 {
 				 tmpPos = abs(v[k]);
 				// cout << bData[i].at(tmpPos - 1) << "\t";
-				 if ((bData[i].at(tmpPos-1) == '1'&v[k]<0)|| (bData[i].at(tmpPos - 1) == '0'&v[k]>0)) {
+				 if ((bData[i].at(tmpPos-1) == '0'&v[k]<0)|| (bData[i].at(tmpPos - 1) == '0'&v[k]>0)) {
 					 v[k] = -v[k];//0置反
 				 }
 				 else

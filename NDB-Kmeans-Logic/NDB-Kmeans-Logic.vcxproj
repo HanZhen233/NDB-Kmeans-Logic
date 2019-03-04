@@ -146,16 +146,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="calDistance.h" />
+    <ClInclude Include="Distance.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="infile.h" />
+    <ClInclude Include="kmeans.h" />
+    <ClInclude Include="knn.h" />
     <ClInclude Include="toBString.h" />
     <ClInclude Include="toNDB.h" />
+    <ClInclude Include="tool.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="calDistance.cpp" />
+    <ClCompile Include="Distance.cpp" />
     <ClCompile Include="infile.cpp" />
+    <ClCompile Include="kmeans.cpp" />
+    <ClCompile Include="knn.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="toBString.cpp" />
     <ClCompile Include="toNDB.cpp" />
+    <ClCompile Include="tool.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

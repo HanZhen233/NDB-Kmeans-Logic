@@ -51,6 +51,7 @@ vector<Cluster> kmeans(vector<NDB> nDBs, int iteration, int k, vector<int> colLe
 	/*多次迭代直至收敛*/
 	for (int it = 0; it < iteration; it++)
 	{
+		cout << "第" << it + 1 << "次迭代";
 		/*每一次重新计算样本点所属类别之前，清空原来样本点信息*/
 		for (int i = 0; i < k; i++)
 		{
@@ -64,6 +65,7 @@ vector<Cluster> kmeans(vector<NDB> nDBs, int iteration, int k, vector<int> colLe
 			double min_distance = EuclidDis_NDB(nDBs[j], clusters[c].centroid, colLen);
 			for (int i = 1; i < k; i++)
 			{
+
 				double distance = EuclidDis_NDB(nDBs[j], clusters[i].centroid, colLen);
 				/*cout<<distance<<" ";*/
 				if (distance < min_distance)
@@ -71,8 +73,10 @@ vector<Cluster> kmeans(vector<NDB> nDBs, int iteration, int k, vector<int> colLe
 					min_distance = distance;
 					c = i;
 				}
+
 			}
 			/*cout<<endl;*/
+			cout << "第" << j << "个" << "样本聚类完成" << endl;
 			clusters[c].samples.push_back(j);
 		}
 
@@ -106,7 +110,10 @@ vector<Cluster> kmeans(vector<NDB> nDBs, int iteration, int k, vector<int> colLe
 				clusters[i].centroid[j] = count[i][j] / clusters[i].samples.size();
 			}
 		}
+
+		cout << "ok" << endl;
 	}
+
 	return clusters;
 }
 

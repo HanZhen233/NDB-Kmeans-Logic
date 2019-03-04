@@ -25,17 +25,23 @@ void countNum(NDB nDB, int **countBits, int ndbLen) {
 	*/
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < K0; j++) {
+			/*
+				数据库从1~136计数
+				countBits从0~135计数，所以使用temp变量进行更改
+			*/
 			if (nData[i][j] > 0) {
 				/*
 					nData[i][j]大于0表示该位为1
 				*/
-				countBits[nData[i][j]][1]++;
+				int temp = nData[i][j]-1;
+				countBits[temp][1]++;
 			}
 			else {
 				/*
 					nData[i][j]小于0表示该位为0
 				*/
-				countBits[-nData[i][j]][0]++;
+				int temp = -(nData[i][j] + 1);
+				countBits[temp][0]++;
 			}
 		}
 	}
@@ -58,6 +64,8 @@ double* countQ(int** countBits, int i, vector<int> colLen) {
 		pDiff += P[i] * i;
 	}
 	pDiff = pDiff / K0;
+
+	double pSame = 1 - pDiff;
 
 	//用于表示某一位为0或1的概率
 	double *p0 = new double[colLen[i]];
@@ -97,8 +105,8 @@ double* countQ(int** countBits, int i, vector<int> colLen) {
 		//p1[j] = pow(Qdiff[j], countBits[id][0])*pow(Qsame[j], countBits[id][1]) / (pow(Qsame[j], countBits[id][0])*pow(Qdiff[j], countBits[id][1]) + pow(Qsame[j], countBits[id][1])*pow(Qdiff[j], countBits[id][0]));
 
 		//我按照暂时的公式理解计算
-		p0[j] = pow(pDiff, countBits[id][0])*pow(pDiff, countBits[id][1]) / (pow(pDiff, countBits[id][0])*pow(pDiff, countBits[id][1]) + pow(pDiff, countBits[id][1])*pow(pDiff, countBits[id][0]));
-		p1[j] = pow(pDiff, countBits[id][0])*pow(pDiff, countBits[id][1]) / (pow(pDiff, countBits[id][0])*pow(pDiff, countBits[id][1]) + pow(pDiff, countBits[id][1])*pow(pDiff, countBits[id][0]));
+		p0[j] = pow(pSame, countBits[id][0])*pow(pDiff, countBits[id][1]) / (pow(pSame, countBits[id][0])*pow(pDiff, countBits[id][1]) + pow(pSame, countBits[id][1])*pow(pDiff, countBits[id][0]));
+		p1[j] = pow(pDiff, countBits[id][0])*pow(pSame, countBits[id][1]) / (pow(pSame, countBits[id][0])*pow(pDiff, countBits[id][1]) + pow(pSame, countBits[id][1])*pow(pDiff, countBits[id][0]));
 	}
 
 
